@@ -1,7 +1,7 @@
 #! /usr/bin/sh
 
 # Create random string
-guid=$(cat /proc/sys/kernel/random/uuid)
+guid=$((10000+$RANDOM%50001))
 suffix=${guid//[-]/}
 suffix=${suffix:0:18}
 
